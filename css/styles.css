@@ -135,7 +135,7 @@ nav {
 .main-div {
   background-color: var(--main-background-color);
   background-image: url(../images/background-image.jpg),
-    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.9));
+    linear-gradient(rgba(47, 48, 58, 1), rgba(47, 48, 58, 0.9));
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 36.67%;
