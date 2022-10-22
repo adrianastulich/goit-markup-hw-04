@@ -95,7 +95,8 @@ nav {
   margin-right: 10px;
   stroke: var(--text-color);
 }
-.icon-contacts:hover {
+.icon-contacts:hover,
+.icon-contacts:focus {
   stroke: var(--active-color);
 }
 .headermenu-item {
@@ -133,7 +134,11 @@ nav {
 /* start of studio */
 .main-div {
   background-color: var(--main-background-color);
-  background-image: "./images/";
+  background-image: url(../images/background-image.jpg),
+    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.9));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 36.67%;
   height: 600px;
   display: flex;
   justify-content: center;
