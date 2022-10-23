@@ -274,7 +274,26 @@ nav {
   letter-spacing: 0.03em;
   color: var(--text-color);
   margin: 0;
+  margin-bottom: 16px;
 }
+.socialmedia-icon-bar {
+  display: flex;
+  gap: 34px;
+  justify-content: center;
+}
+.socialmedia-element {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialmedia-element:hover {
+  background-color: #2196f3;
+}
+
 /* end of studio */
 
 /* start of portfolio */
