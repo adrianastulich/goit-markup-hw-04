@@ -9,10 +9,12 @@
   --main-background-color: #2f303a;
   --subsection-background-color: #f5f4fa;
   --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --footer-icon-background: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.25);
   --second-shadow-color: rgba(0, 0, 0, 0.12);
   --third-shadow-color: rgba(0, 0, 0, 0.14);
   --forth-shadow-color: rgba(0, 0, 0, 0.2);
+  --icon-color: #afb1b8;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -90,15 +92,15 @@ nav {
   margin-left: 390px;
   margin-right: 0;
 }
+.header-contacts-bar:hover {
+  stroke: var(--active-color);
+  color: var(--active-color);
+}
 
 .icon-contacts {
   margin-right: 10px;
-  stroke: var(--text-color);
 }
-.icon-contacts:hover,
-.icon-contacts:focus {
-  stroke: var(--active-color);
-}
+
 .headermenu-item {
   text-decoration: none;
   color: var(--brand-text-color);
@@ -124,18 +126,23 @@ nav {
 .header-contacts:visited {
   color: var(--text-color);
   text-decoration: none;
+  fill: var(--text-color);
 }
 .header-contacts:hover,
 .header-contacts:focus {
   color: var(--active-color);
+  fill: var(--active-color);
 }
 /* end of header */
 
 /* start of studio */
 .main-div {
   background-color: var(--main-background-color);
-  background-image: url(../images/background-image.jpg),
-    linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 36.67%;
@@ -223,6 +230,7 @@ nav {
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
+  color: var(--brand-text-color);
 }
 
 .whatwedo-list {
@@ -234,8 +242,7 @@ nav {
 }
 .ourteam {
   background: var(--subsection-background-color);
-
-  height: 648px;
+  height: 708px;
 }
 .ourteam-card {
   margin: 0;
@@ -278,11 +285,12 @@ nav {
 }
 .socialmedia-icon-bar {
   display: flex;
-  gap: 34px;
   justify-content: center;
+  gap: 10px;
 }
 .socialmedia-element {
-  background-color: #ffffff;
+  background-color: var(--subsection-background-color);
+  fill: var(--icon-color);
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -290,8 +298,35 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.socialmedia-element:hover {
-  background-color: #2196f3;
+
+.socialmedia-element:hover,
+.socialmedia-element:focus {
+  fill: var(--brand-color);
+  background-color: var(--active-color);
+}
+
+.our-clients {
+  height: 372px;
+}
+.ourclients-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.ourclients-list-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--icon-color);
+}
+.ourclients-list-item:hover {
+  fill: var(--active-color);
+  border-color: var(--active-color);
 }
 
 /* end of studio */
@@ -372,13 +407,55 @@ nav {
 /* start of footer */
 .footer-part {
   background-color: var(--main-background-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 13.44%;
-  padding-right: 14.19%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.footer-parts {
+  display: flex;
+}
+.footer-part-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 70px;
+}
+.footer-part-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 40px;
+}
+.footer-socialmedia-element {
+  background-color: var(--footer-icon-background);
+  fill: var(--brand-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-description {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.026rem;
+  color: var(--brand-color);
+}
+
+.footer-socialmedia-element:hover,
+.footer-socialmedia-element:focus {
+  fill: var(--brand-color);
+  background-color: var(--active-color);
+}
+.footer-socialmedia {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-start;
 }
 .white-text {
   color: var(--brand-color);
@@ -425,8 +502,12 @@ nav {
   margin: 0;
   padding: 0;
 }
-.footer-contacts:hover,
-.footer-contacts:focus {
+.footer-contacts-mail:hover,
+.footer-contacts-mail:focus {
+  color: var(--active-color);
+}
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus {
   color: var(--active-color);
 }
 
