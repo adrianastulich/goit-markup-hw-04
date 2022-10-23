@@ -206,6 +206,16 @@ nav {
   margin: 0;
 }
 
+.descriptionlist-card-item {
+  width: 270px;
+  height: 120px;
+  background-color: var(--subsection-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
 .subtitle {
   font-weight: 700;
   font-size: 36px;
