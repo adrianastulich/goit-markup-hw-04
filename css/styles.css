@@ -14,6 +14,7 @@
   --second-shadow-color: rgba(0, 0, 0, 0.12);
   --third-shadow-color: rgba(0, 0, 0, 0.14);
   --forth-shadow-color: rgba(0, 0, 0, 0.2);
+  --fifth-shadow-color: rgba(0, 0, 0, 0.16);
   --icon-color: #afb1b8;
 }
 body {
@@ -385,12 +386,16 @@ nav {
   color: var(--text-color);
   margin: 0;
 }
-
+/* box-shadow: <x-offset> <y-offset> <blur> <spread> <color> */
 .portfolio-card {
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.portfolio-card:hover,
+.portfolio-card:focus {
+  box-shadow: 1px 4px 6px 0px var(--fifth-shadow-color);
 }
 .portfolio-card-description {
   background-color: var(--brand-color);
