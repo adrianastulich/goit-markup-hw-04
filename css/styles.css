@@ -290,7 +290,7 @@ nav {
   gap: 10px;
 }
 .socialmedia-element {
-  background-color: var(--subsection-background-color);
+  background-color: var(--brand-color);
   fill: var(--icon-color);
   border-radius: 50%;
   width: 44px;
